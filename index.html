@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="goker">
+    <title>goker.be</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assests/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assests/css/odometer-theme-default.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="assests/css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top">goker.be</a>
+        </li>
+        <li>
+            <a href="#top">Home</a>
+        </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#donations">Donations</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <div>
+            <h1>I need <b class="animation">$<span class="odometer odometer-auto-theme">8000</span><u>0</u></b> more!
+            </h1>
+
+            <h3>Hi, I'm goker. I don't want to become a soldier. I want to <u>be</u> who I am!<br>
+                I live in Turkey and I won't have to serve in the military service if I pay <b class="total">$8000</b>
+                to the
+                government.
+            </h3>
+            <br>
+
+            <form class="form-inline" role="form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="item_name" placeholder="nickname or message">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label class="sr-only" for="email">Email address</label>
+
+                        <div class="input-group-addon">@</div>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label class="sr-only" for="email">Amount</label>
+
+                        <div class="input-group-addon">$</div>
+                        <input id="amount" type="text" class="form-control" name="amount" value="10">
+                    </div>
+                </div>
+                <input type="hidden" name="charset" value="utf-8">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="business" value="donate@goker.be">
+                <input type="hidden" name="return" value="http://goker.be/">
+                <input type="hidden" name="notify_url" value="http://goker.be/ipn.php">
+                <input type="hidden" name="cmd" value="_donations">
+                <img alt="" border="0" src="https://www.paypalobjects.com/tr_TR/i/scr/pixel.gif" width="1" height="1">
+                <button type="submit" class="btn btn-default">Donate for my life!</button>
+            </form>
+            <br>
+            <h4><b>Who am I? </b>I'm an open source coder and an aquarist. I'm a masters student in computer
+                engineering.
+                <br>And I love learning, developing and sharing. I don't want to be forced to have a break from these
+                for military service.</h4>
+
+
+            <a href="http://instagram.com/gokercebeci" target="_blank" class="btn btn-dark">
+                <i class="fa fa-instagram fa-fw"></i>Instagram</a>
+            <a href="http://github.com/gokercebeci" target="_blank" class="btn btn-dark">
+                <i class="fa fa-github fa-fw"></i>Github</a>
+        </div>
+    </div>
+</header>
+
+<!-- Donations -->
+<section id="donations" class="donations">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Donations</h2>
+
+                <h3>I'm very appreciated for your donations.</h3>
+
+                <div id="donationList"></div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>About</h2>
+
+                <p>
+                    I developed the website with
+                    <a href="http://php.net/" target="_blank">PHP</a>,
+                    <a href="http://jquery.com/" target="_blank">jQuery</a>,
+                    <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and
+                    <a href="http://startbootstrap.com" target="_blank">Stylish Portfolio Bootstrap Theme</a>.
+                    It collects donations by <a href="" target="_blank">PayPal</a>.
+                </p><p>
+                    It is totally open source and you can reach the source code on
+                    <a href="http://github.com/gokercebeci/donee
+                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donee</a>
+                </p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <hr class="small">
+                <p class="text-muted">goker.be <i class="fa fa-cc fa-fw"></i>
+
+                    donee by <a href=http://goker.be>goker</a> is licensed under a Creative Commons Attribution 4.0
+                    International License.
+                    Based on a work at <a href="http://github.com/gokercebeci/donee
+                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donee</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery Version 1.11.0 -->
+<script src="assests/js/jquery-1.11.0.js"></script>
+<script src="assests/js/odometer.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+        var goal = 8000;
+        var toalAmount = 0;
+        var lastAmount = 0;
+        var lastDonation = 0;
+
+        $.getJSON("donations.json", function (data) {
+            var items = [];
+            $.each(data, function (key, val) {
+                toalAmount += val.gross * 1;
+                items.push("<div id='" + key + "' class='col-lg-3 donation'><div class='content'><b>" + (key + 1)
+                        + "</b><span class='message'>" + val.message + "</span><span class='gross'>" + val.gross + "</span></div></div>");
+            });
+            lastDonation = data[data.length - 1]['gross'] * 1;
+            lastAmount = goal - toalAmount;
+            $('.animation').addClass('animate');
+            $('.animation u').html('-' + lastDonation);
+            var el = document.querySelector('.animation span');
+            var od = new Odometer({
+                el: el,
+                value: (lastAmount + lastDonation),
+                format: ''
+            });
+            od.update(lastAmount)
+
+            $('#donationList').html(items.join(""));
+        });
+
+
+    });
+</script>
+
+</body>
+
+</html>
