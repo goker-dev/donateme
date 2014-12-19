@@ -56,21 +56,23 @@ if (!$fp) { // HTTP ERROR
     }
 }
 fclose($fp);
-$info = array(
-    'status' => $status,
-    'date' => $_POST['payment_date'],
-    'message' => $_POST['item_name'] ? $_POST['item_name'] : 'Guest',
-    'custom' => $_POST['custom'],
-    'gross' => $_POST['mc_gross'],
-    'fee' => $_POST['mc_fee']
-);
+if ($_POST['payment_date']) {
+    $info = array(
+        'status' => $status,
+        'date' => $_POST['payment_date'],
+        'message' => $_POST['item_name'] ? $_POST['item_name'] : 'Guest',
+        'custom' => $_POST['custom'],
+        'gross' => $_POST['mc_gross'],
+        'fee' => $_POST['mc_fee']
+    );
 
 
-$content = @file_get_contents('donations.json');
-if ($content === FALSE)
-    $data = array();
-else
-    $data = json_decode($content, 1);
+    $content = @file_get_contents('donations.json');
+    if ($content === FALSE)
+        $data = array();
+    else
+        $data = json_decode($content, 1);
 
-array_push($data, $info);
-file_put_contents('donations.json', json_encode($data));
+    array_push($data, $info);
+    file_put_contents('donations.json', json_encode($data));
+}

@@ -295,6 +295,7 @@ footer {
 }
 
 #donationList .donation > .content {
+    margin: 1px 0;
     padding: 10px;
     background: rgba(0, 0, 0, .13);
     border-radius: 3px;
