@@ -1,4 +1,5 @@
 AddDefaultCharset utf-8
+ErrorDocument 404 /index.html
 Options -MultiViews
 <IfModule mod_headers.c>
     Header set X-UA-Compatible "IE=edge"
