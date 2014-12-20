@@ -1,6 +1,8 @@
 <?php
 
 // PAYPAL IPN INTEGRATION
+// https://developer.paypal.com/webapps/developer/applications/ipn_simulator
+
 error_reporting(E_ALL ^ E_NOTICE);
 // Read the post from PayPal and add 'cmd'
 $req = 'cmd=_notify-validate';
@@ -32,47 +34,30 @@ if (!$fp) { // HTTP ERROR
     while (!feof($fp)) {
         $res = fgets($fp, 1024);
         if (strcmp($res, "VERIFIED") == 0) {
-            // TODO:
-            // Check the payment_status is Completed
-            // Check that txn_id has not been previously processed
-            // Check that receiver_email is your Primary PayPal email
-            // Check that payment_amount/payment_currency are correct
-            // Process payment
-            // If 'VERIFIED', send an email of IPN variables and values to the
-            // specified email address
-            foreach ($_POST as $key => $value) {
-                $emailtext .= $key . " = " . $value . "\n\n";
+
+            if ($_POST['payment_date']) {
+                $info = array(
+                    'status' => true,
+                    'date' => $_POST['payment_date'],
+                    'message' => $_POST['item_name'] ? $_POST['item_name'] : 'Guest',
+                    'custom' => $_POST['custom'],
+                    'gross' => $_POST['mc_gross'],
+                    'fee' => $_POST['mc_fee']
+                );
+
+                $content = @file_get_contents('donations.json');
+                if ($content === FALSE)
+                    $data = array();
+                else
+                    $data = json_decode($content, 1);
+
+                array_push($data, $info);
+                file_put_contents('donations.json', json_encode($data));
             }
-            $status = true; //"Live-VERIFIED IPN";
-            //mail($email, "Live-VERIFIED IPN", $emailtext . "\n\n" . $req);
+
         } elseif (strcmp($res, "INVALID") == 0) {
-            // If 'INVALID', send an email. TODO: Log for manual investigation.
-            foreach ($_POST as $key => $value) {
-                $emailtext .= $key . " = " . $value . "\n\n";
-            }
             $status = false; //"Live-INVALID IPN";
-            //mail($email, "Live-INVALID IPN", $emailtext . "\n\n" . $req);
         }
     }
 }
 fclose($fp);
-if ($_POST['payment_date']) {
-    $info = array(
-        'status' => $status,
-        'date' => $_POST['payment_date'],
-        'message' => $_POST['item_name'] ? $_POST['item_name'] : 'Guest',
-        'custom' => $_POST['custom'],
-        'gross' => $_POST['mc_gross'],
-        'fee' => $_POST['mc_fee']
-    );
-
-
-    $content = @file_get_contents('donations.json');
-    if ($content === FALSE)
-        $data = array();
-    else
-        $data = json_decode($content, 1);
-
-    array_push($data, $info);
-    file_put_contents('donations.json', json_encode($data));
-}

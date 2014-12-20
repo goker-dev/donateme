@@ -308,3 +308,43 @@ footer {
 #donationList .donation .gross::before {
     content: ' - $';
 }
+
+.time {
+    margin: 20px 0 0;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.time .prefix {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.time .deadline {
+    display: inline-block;
+    width: 300px;
+}
+.flipclock {
+    float: left;
+}
+
+.flipclock .section {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.share {
+    padding: 13px 0 0;
+    text-align: center;
+    font-size: 1px;
+}
+.share span {
+    display: inline-block;
+    padding: 0 3px;
+    width: 110px;
+}
+.share .google {
+    width: 75px;
+}

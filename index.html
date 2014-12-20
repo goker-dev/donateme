@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Hi, I'm goker. I don't want to become a soldier. I want to be who I am! I live in Turkey and I won't have to serve in the military service if I pay $8000 to the government.">
+          content="I don't want to become a soldier. I live in Turkey and I won't have to serve in the military service if I pay $8000 to the government. #donateme">
     <meta name="author" content="goker">
-    <title>goker.be</title>
+    <title>goker.be / #donateme</title>
 
     <!-- Facebook meta - https://developers.facebook.com/tools/debug/ -->
     <meta property="og:type" content="website">
@@ -17,6 +17,7 @@
           content="Hi, I'm goker. I don't want to become a soldier. I want to be who I am! I live in Turkey and I won't have to serve in the military service if I pay $8000 to the government.">
     <meta property="og:image" content="http://goker.be/assets/img/facebook.jpg">
 
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
@@ -27,7 +28,11 @@
           rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
+    <link href="assets/css/flipclock.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link href="assets/css/stylish-portfolio.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +49,7 @@
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li><a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a></li>
         <li class="sidebar-brand">
             <a href="#top">goker.be</a>
         </li>
@@ -67,8 +72,22 @@
             <h1>I need <b class="animation">$<span class="odometer odometer-auto-theme">8000</span><u>0</u></b> more!
             </h1>
 
-            <h3>Hi, I'm goker. I don't want to become a soldier. I want to <u>be</u> who I am!<br>
-                I live in Turkey and I won't have to serve in the military service if I pay <b class="total">$8000</b>
+            <p class="time hidden-sm hidden-xs">
+                <span class="prefix">until</span>
+                <span class="deadline">
+                    <span class="flipclock">
+                        <!--<span class="section" data-section="year">year</span>-->
+                        <span class="section" data-section="month">month</span>
+                        <span class="section" data-section="day">day</span>
+                        <span class="section" data-section="hour">hour</span>
+                        <span class="section" data-section="minute">min</span>
+                        <span class="section" data-section="second">sec</span>
+                    </span>
+                </span>
+            </p>
+
+            <h3 class="vcard">Hi, I'm goker. I don't want to become a soldier. I want to <u>be</u> who I am!<br>
+                I live in <span class="addr"><span class="country">Turkey</span></span> and I won't have to serve in the military service if I pay <b class="total">$8000</b>
                 to the
                 government.
             </h3>
@@ -102,7 +121,7 @@
                 <input type="hidden" name="return" value="http://goker.be/">
                 <input type="hidden" name="notify_url" value="http://goker.be/ipn.php">
                 <input type="hidden" name="cmd" value="_donations">
-                <img alt="" border="0" src="https://www.paypalobjects.com/tr_TR/i/scr/pixel.gif" width="1" height="1">
+                <img alt="paypal" src="https://www.paypalobjects.com/tr_TR/i/scr/pixel.gif" width="1" height="1">
                 <button type="submit" class="btn btn-default">Donate for my life!</button>
             </form>
             <br>
@@ -111,11 +130,22 @@
                 <br>And I love learning, developing and sharing. I don't want to be forced to have a break from these
                 for military service.</h4>
 
-
+            <a href="http://twitter.com/gokercebeci" target="_blank" class="btn btn-dark">
+                <i class="fa fa-twitter fa-fw"></i>Twitter</a>
             <a href="http://instagram.com/gokercebeci" target="_blank" class="btn btn-dark">
                 <i class="fa fa-instagram fa-fw"></i>Instagram</a>
+            <a href="https://plus.google.com/+GökerCebeci" target="_blank" class="btn btn-dark" rel="Publisher">
+                <i class="fa fa-google-plus fa-fw"></i>Google+</a>
             <a href="http://github.com/gokercebeci" target="_blank" class="btn btn-dark">
                 <i class="fa fa-github fa-fw"></i>Github</a>
+
+
+            <div class="share">
+                <span class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="donateme">Tweet</a></span>
+                <span class="facebook"><a class="fb-share-button" data-href="http://goker.be/" data-layout="button_count"></a></span>
+                <span class="google"><a class="g-plus" data-action="share"></a></span>
+            </div>
+
         </div>
     </div>
 </header>
@@ -150,14 +180,14 @@
                     <a href="http://php.net/" target="_blank">PHP</a>,
                     <a href="http://jquery.com/" target="_blank">jQuery</a>,
                     <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and
-                    <a href="http://startbootstrap.com" target="_blank">Stylish Portfolio Bootstrap Theme</a>.
+                    <a href="http://startbootstrap.com/template-overviews/stylish-portfolio/" target="_blank">Stylish Portfolio Bootstrap Theme</a>.
                     It collects donations by <a href="" target="_blank">PayPal</a>.
                 </p>
 
                 <p>
                     It is totally open source and you can reach the source code on
-                    <a href="http://github.com/gokercebeci/donee
-                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donee</a>
+                    <a href="http://github.com/gokercebeci/donateme
+                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donateme</a>
                 </p>
             </div>
         </div>
@@ -175,19 +205,20 @@
                 <hr class="small">
                 <p class="text-muted">goker.be <i class="fa fa-cc fa-fw"></i>
 
-                    donee by <a href=http://goker.be>goker</a> is licensed under a Creative Commons Attribution 4.0
+                    #donateme by <a href=http://goker.be>goker</a> is licensed under a Creative Commons Attribution 4.0
                     International License.
-                    Based on a work at <a href="http://github.com/gokercebeci/donee
-                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donee</a>.
+                    Based on a work at <a href="http://github.com/gokercebeci/donateme
+                    "><i class="fa fa-github fa-fw"></i>github.com/gokercebeci/donateme</a>.
                 </p>
             </div>
         </div>
     </div>
 </footer>
-
+<div id="fb-root"></div>
 <!-- jQuery Version 1.11.0 -->
 <script src="assets/js/jquery-1.11.0.js"></script>
 <script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/flipclock.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script>
@@ -246,7 +277,60 @@
         });
 
 
+        $('.flipclock').flipclock({
+            countdown: '02/01/2015 00:00:00'/*, audio: '/assets/audios/click.mp3'*/
+        });
+
+
     });
+
+    // twitter
+    !function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');
+
+    // facebook
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=217426445049313&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // google +
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+
+    // google analytics
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-27926240-4', 'auto');
+    ga('send', 'pageview');
+
 </script>
 
 </body>
