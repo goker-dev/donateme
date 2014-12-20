@@ -1,7 +1,7 @@
 #`#donateme`
 
-\#donateme is a simple donation collection project. 
-I developed the website with [PHP](http://php.net/), [jQuery](http://jquery.com/), [Bootstrap](http://getbootstrap.com/)
+\#donateme is a simple donation collection website project. 
+I developed the project with [PHP](http://php.net/), [jQuery](http://jquery.com/), [Bootstrap](http://getbootstrap.com/)
 and [Stylish Portfolio Bootstrap Theme](http://startbootstrap.com/template-overviews/stylish-portfolio/). 
 It collects donations by PayPal.
 
@@ -16,8 +16,12 @@ It is under the [MIT License](https://github.com/gokercebeci/donateme/blob/maste
 and It use **Stylish Portfolio Bootstrap Theme** 
 which is licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-##Demo
+##Live Demo
 http://goker.be
+
+![alt text](https://github.com/gokercebeci/donateme/raw/master/assets/img/facebook.jpg "goker.be")
+
+
 
 
 
